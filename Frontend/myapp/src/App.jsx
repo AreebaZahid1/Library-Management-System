@@ -10,7 +10,7 @@ import LibraryRecord from "./pages/LibraryRecord";
 import NavbarWrapper from "./Components/NavbarWrapper";
 import ProtectedRoute from "./Components/ProtectedRoute";
 
-import ForgetPassword from "./Pages/ForgetPassword";
+import ForgetPassword from "./Pages/ForgetPassword.jsx";
 
 function App() {
   return (
