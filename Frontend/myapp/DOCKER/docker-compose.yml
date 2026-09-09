@@ -1,0 +1,55 @@
+services:
+
+  backend:
+    build:
+    context: ..
+    dockerfile: DOCKER/Dockerfile
+    container_name: bookkeeper-backend
+
+    restart: always
+
+    ports:
+      - "3000:3000"
+
+    environment:
+       PORT: 3000
+       MONGO_URI: mongodb://mongo:27017/bookkeeper
+
+    depends_on:
+        - mongo
+  
+
+    volumes:
+          - ../:/app
+
+    command: npm start
+
+  frontend:
+    build:
+      context: ../../../Frontend/myapp
+      dockerfile: DOCKER/Dockerfile
+    container_name: bookkeeper-frontend
+
+    restart: always
+
+    ports:
+      - "5173:5173"
+
+   
+    stdin_open: true
+
+    tty: true
+
+    depends_on:
+      - backend
+
+    volumes:
+       - ../../../Frontend/myapp:/app
+
+    command: npm run dev -- --host 0.0.0.0
+  
+  mongo:
+     image: mongo
+     container_name: bookkeeper-mongo
+     ports:
+       - "27017:27017"

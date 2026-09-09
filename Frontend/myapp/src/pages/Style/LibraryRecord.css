@@ -1,0 +1,87 @@
+.library-page {
+  min-height: 100vh;
+  background-color: #f4f6f9;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Heading */
+.library-heading {
+  text-align: center;
+  color: #4f46e5;
+  margin-bottom: 30px;
+  /* font-size: 32px; */
+}
+
+
+/* Table */
+.library-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+.library-table th {
+  background-color: #4f46e5;
+  color: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+
+.library-table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+
+/* No records message */
+.no-records {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  font-size: 20px;
+}
+
+
+/* Buttons */
+.delete-btn {
+  padding: 8px 15px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.delete-btn:hover {
+  background-color: #bb2d3b;
+}
+
+
+/* Add button */
+.add-record-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+
+/* Status */
+.status-issued {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+
+.status-returned {
+  color: #28a745;
+  font-weight: bold;
+}
