@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import Books from "./pages/Books";
-import Category from "./pages/Category";
-import LibraryRecord from "./pages/LibraryRecord";
+import Home from "./Pages/Home.jsx";
+import Login from "./Pages/Login.jsx";
+import Signup from "./Pages/Signup.jsx";
+import Books from "./Pages/Books.jsx";
+import Category from "./Pages/Category.jsx";
+import LibraryRecord from "./Pages/LibraryRecord.jsx";
 
 import NavbarWrapper from "./Components/NavbarWrapper";
 import ProtectedRoute from "./Components/ProtectedRoute";
