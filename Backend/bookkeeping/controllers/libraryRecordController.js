@@ -1,4 +1,4 @@
-const LibraryRecordModel = require('../models/libraryRecord');
+const LibraryRecordModel = require('../models/LibraryRecord');
 
 const addLibraryRecord = async (req, res) => {
     try 
