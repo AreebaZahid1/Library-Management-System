@@ -16,7 +16,7 @@ function Login() {
     try
     {
       // response ka obj banaya axios.API ki jis k parameters hain url of the API and body
-       const response = await api.post('http://localhost:3000/api/auth/login', {email,password})
+       const response = await api.post('https://library-management-system-hdxd.vercel.app/api/auth/login', {email,password})
        console.log(response.data.message)
        alert(response.data.message)
        localStorage.setItem("token",response.data.token);

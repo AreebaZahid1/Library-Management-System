@@ -23,7 +23,7 @@ const sendOTP = async (e) => {
    e.preventDefault();
    try 
    {
-    const response = await axios.post("http://localhost:3000/api/auth/forgetPassword",{email,});
+    const response = await axios.post("https://library-management-system-hdxd.vercel.app/api/auth/forgetPassword",{email,});
 
     setMessage(response.data.message);
     // Show OTP and new-password form
@@ -41,7 +41,7 @@ const resetPassword = async (e) => {
 
   try 
   {
-    const response = await axios.post("http://localhost:3000/api/auth/reset-password",{  email,  otp,  newPassword,});
+    const response = await axios.post("https://library-management-system-hdxd.vercel.app/api/auth/reset-password",{  email,  otp,  newPassword,});
 
     setMessage(response.data.message);
   // Go to login page after 1.5 seconds

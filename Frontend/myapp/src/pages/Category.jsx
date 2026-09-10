@@ -38,7 +38,7 @@ const [editId, setEditId] = useState(null);
   const getCategory = async () => {
     try 
     {
-      const response = await api.get("http://localhost:3000/api/categories/get-categories");
+      const response = await api.get("https://library-management-system-hdxd.vercel.app/api/categories/get-categories");
 
       setCategory(response.data.categories);
     } 
@@ -69,7 +69,7 @@ const [editId, setEditId] = useState(null);
 
     try 
     {
-      const response = await api.post("http://localhost:3000/api/categories/add-category",formData);
+      const response = await api.post("https://library-management-system-hdxd.vercel.app/api/categories/add-category",formData);
 
       alert(response.data.message);
 
@@ -92,7 +92,7 @@ const [editId, setEditId] = useState(null);
 
     try 
     {
-      const response = await api.delete(`http://localhost:3000/api/categories/delete-category/${id}`);
+      const response = await api.delete(`https://library-management-system-hdxd.vercel.app/api/categories/delete-category/${id}`);
 
       alert(response.data.message);
 
@@ -123,7 +123,7 @@ e.preventDefault();
 
 try 
 {
-  const response = await api.put(`http://localhost:3000/api/categories/update-category/${editId}`,formData);
+  const response = await api.put(`https://library-management-system-hdxd.vercel.app/api/categories/update-category/${editId}`,formData);
 
   alert(response.data.message);
 

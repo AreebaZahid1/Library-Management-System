@@ -69,7 +69,7 @@ function LibraryRecord() {
   const getRecords = async () => {
     try 
     {
-      const response = await api.get("http://localhost:3000/api/library/get-records");
+      const response = await api.get("https://library-management-system-hdxd.vercel.app/api/library/get-records");
       setRecords(response.data.libraryRecords || []);
 
     } 
@@ -84,7 +84,7 @@ function LibraryRecord() {
   const getBooks = async () => {
     try 
     {
-      const response = await api.get("http://localhost:3000/api/books/get-books");
+      const response = await api.get("https://library-management-system-hdxd.vercel.app/api/books/get-books");
       setBooks(response.data.books || []);
     } 
     catch(error) 
@@ -97,7 +97,7 @@ function LibraryRecord() {
   const getUsers = async () => {
     try 
     {
-      const response = await api.get("http://localhost:3000/api/auth/getUsers");
+      const response = await api.get("https://library-management-system-hdxd.vercel.app/api/auth/getUsers");
       setUsers(response.data.users || []);
     } 
     catch(error) 
@@ -130,7 +130,7 @@ function LibraryRecord() {
     e.preventDefault();
     try 
     {
-      const response = await api.post("http://localhost:3000/api/library/add-record",formData);
+      const response = await api.post("https://library-management-system-hdxd.vercel.app/api/library/add-record",formData);
       alert(response.data.message);
       getRecords();
       setShowForm(false);
@@ -153,7 +153,7 @@ function LibraryRecord() {
       return;
     try 
     {
-      const response = await api.delete(`http://localhost:3000/api/library/delete-record/${id}`);
+      const response = await api.delete(`https://library-management-system-hdxd.vercel.app/api/library/delete-record/${id}`);
 
       alert(response.data.message);
       getRecords();
@@ -182,7 +182,7 @@ function LibraryRecord() {
 
 try 
 {
-  const response = await api.put(`http://localhost:3000/api/library/update-record/${editId}`,formData);
+  const response = await api.put(`https://library-management-system-hdxd.vercel.app/api/library/update-record/${editId}`,formData);
 
   alert(response.data.message);
 

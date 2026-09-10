@@ -61,7 +61,7 @@ function Books() {
   const getBooks = async () => {
     try
     {
-      const response = await api.get("http://localhost:3000/api/books/get-books");
+      const response = await api.get("https://library-management-system-hdxd.vercel.app/api/books/get-books");
 
       setBooks(response.data.books);
     } 
@@ -76,7 +76,7 @@ function Books() {
   const getCategories = async () => {
     try 
     {
-      const response = await api.get("http://localhost:3000/api/categories/get-categories");
+      const response = await api.get("https://library-management-system-hdxd.vercel.app/api/categories/get-categories");
 
       setCategories(response.data.categories);
     } 
@@ -107,7 +107,7 @@ function Books() {
 
     try 
     {
-      const response = await api.post("http://localhost:3000/api/books/add-book",formData);
+      const response = await api.post("https://library-management-system-hdxd.vercel.app/api/books/add-book",formData);
 
       alert(response.data.message);
 
@@ -131,7 +131,7 @@ function Books() {
 
     try 
     {
-      const response = await api.delete(`http://localhost:3000/api/books/delete-book/${id}`);
+      const response = await api.delete(`https://library-management-system-hdxd.vercel.app/api/books/delete-book/${id}`);
 
       alert(response.data.message);
       getBooks();
@@ -161,7 +161,7 @@ function Books() {
 
 try 
 {
-  const response = await api.put(`http://localhost:3000/api/books/update-book/${editId}`,formData);
+  const response = await api.put(`https://library-management-system-hdxd.vercel.app/api/books/update-book/${editId}`,formData);
 
   alert(response.data.message);
 

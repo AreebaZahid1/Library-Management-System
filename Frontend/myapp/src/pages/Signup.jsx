@@ -28,7 +28,7 @@ function Signup() {
         formData.append("profilePicture", profilePicture);
 
       // response ka obj banaya axios.API ki jis k parameters hain url of the API and body
-       const response = await api.post('http://localhost:3000/api/auth/register', formData)
+       const response = await api.post('https://library-management-system-hdxd.vercel.app/api/auth/register', formData)
        console.log(response.data.message)
       alert(response.data.message);
       // Redirect to Login page
