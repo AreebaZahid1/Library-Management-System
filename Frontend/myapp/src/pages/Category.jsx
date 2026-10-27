@@ -123,7 +123,7 @@ e.preventDefault();
 
 try 
 {
-  const response = await api.put(`https://library-management-system-hdxd.vercel.app/api/categories/update-category/${editId}`,formData);
+  const response = await api.put(`https://style-hive-nl9ivtptx-areeba-aee0.vercel.app/api/categories/update-category/${editId}`,formData);
 
   alert(response.data.message);
 

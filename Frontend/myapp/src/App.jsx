@@ -10,7 +10,7 @@ import LibraryRecord from "./pages/LibraryRecord.jsx";
 import NavbarWrapper from "./Components/NavbarWrapper";
 import ProtectedRoute from "./Components/ProtectedRoute";
 
-import ForgetPassword from "./pages/ForgetPassword.jsx";
+// import ForgetPassword from "./pages/ForgetPassword.jsx";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         {/* Public Routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/forgetPassword" element={<ForgetPassword />}/>
+        {/* <Route path="/forgetPassword" element={<ForgetPassword />}/> */}
         
         {/* Protected Routes */}
         {/* Navbar Wrapper */}
